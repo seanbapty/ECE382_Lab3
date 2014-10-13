@@ -89,12 +89,15 @@ delayNokiaResetHigh:
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/prelab%20table%204.JPG)
 
 #Lab
+##Physical Communication
 The code provided in the lab called NokiaByte 4 times in order to sent packets of data to the display and draw a line. The table below summarizes these calls.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%201.JPG)
 
 Additionally, the table below summarizes the 9 bit packets (reduced to 8 bit by seperating the MSB) analyzed by the logic analyzer. These packets are representative of the first line drawn on the LCD in the upper right corner.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%202.JPG)
-
+##Writing Modes
+As a demonstration of logical operators the chart below was made.
+![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/andOrXor.JPG)
 ####Documentation
 DOCUMENTATION: The following cadets worked together and discussed Lab 3 Mega Prelab on Sunday, 28 September 2014 starting at 1830 in the 321 classroom. 
 •	C2C Nathan Ruprecht
