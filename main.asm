@@ -61,9 +61,9 @@ while0:
 	bit.b	#8, &P2IN					; bit 3 of P1IN clear?
 	jz		while0						; Yes, branch back and wait
 
-	mov		#8, R7						; to draw a box 8x8
+	mov		#8, R7						; to draw a box 8x8 r7 counts number of iterations
 boxloop
-	mov		#NOKIA_DATA, R12			;
+	mov		#NOKIA_DATA, R12			; loops through drawing an 8 pixel vertical line 8 times offset 1 bit horizontally
 	mov		#0xFF, R13					;
 	call	#writeNokiaByte
 	dec 	R7
