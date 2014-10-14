@@ -89,30 +89,49 @@ delayNokiaResetHigh:
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/prelab%20table%204.JPG)
 
 #Lab
+##Objectives
+The goal of this lab was to use the logic analyzer to examine how the MSP430 handles periferals, and modify code that draws a line on a LCD when a button is pressed to draw a box on the LCD when a button is pressed.
 ##Physical Communication
 The code provided in the lab called NokiaByte 4 times in order to sent packets of data to the display and draw a line. The table below summarizes these calls.
+
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%201.JPG)
 
 Additionally, the table below summarizes the 9 bit packets (reduced to 8 bit by seperating the MSB) analyzed by the logic analyzer. These packets are representative of the first line drawn on the LCD in the upper right corner.
+
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%202.JPG)
 ##Writing Modes
 As a demonstration of logical operators the chart below was made.
+
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/andOrXor.JPG)
 ####Documentation
 DOCUMENTATION: The following cadets worked together and discussed Lab 3 Mega Prelab on Sunday, 28 September 2014 starting at 1830 in the 321 classroom. 
 •	C2C Nathan Ruprecht
+
 •	C2C Erik Thompson
+
 •	C2C Austin Bolinger
+
 •	C2C Sabin Park
+
 •	C2C Kyle Jonas
+
 •	C2C Jeremy Gruszka
+
 •	C2C Kevin Cabusora
+
 •	C2C Taylor Bodin
+
 •	C2C Jarrod Wooden 
+
 •	C2C Sean Bapty
+
 •	C2C Erica Lewandowski
+
 •	C2C Chris Kiernan
+
 •	C2C JP Terragnoli
+
 •	C2C Hunter Her
+
 •	C2C Gytenis Borusas
 
