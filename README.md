@@ -91,7 +91,9 @@ delayNokiaResetHigh:
 #Lab
 ##Objectives
 The goal of this lab was to use the logic analyzer to examine how the MSP430 handles periferals, and modify code that draws a line on a LCD when a button is pressed to draw a box on the LCD when a button is pressed.
-##Physical Communication
+##Preliminary design
+To get started using the logic analyzer and determining which section of code needed to be modified, the Physical Communication and Writing Modes were analyzed.
+###Physical Communication
 The code provided in the lab called NokiaByte 4 times in order to sent packets of data to the display and draw a line. The table below summarizes these calls.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%201.JPG)
@@ -99,7 +101,7 @@ The code provided in the lab called NokiaByte 4 times in order to sent packets o
 Additionally, the table below summarizes the 9 bit packets (reduced to 8 bit by seperating the MSB) analyzed by the logic analyzer. These packets are representative of the first line drawn on the LCD in the upper right corner.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%202.JPG)
-##Writing Modes
+###Writing Modes
 As a demonstration of logical operators the chart below was made.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/andOrXor.JPG)
