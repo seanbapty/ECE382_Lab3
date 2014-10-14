@@ -90,7 +90,7 @@ delayNokiaResetHigh:
 
 #Lab
 ##Objectives
-The goal of this lab was to use the logic analyzer to examine how the MSP430 handles periferals, and modify code that draws a line on a LCD when a button is pressed to draw a box on the LCD when a button is pressed.
+The goal of this lab was to use the logic analyzer to examine how the MSP430 handles periferals, and modify code that draws a line on a LCD when a button is pressed to draw an 8x8 box on the LCD when a button is pressed.
 ##Preliminary design
 To get started using the logic analyzer and determining which section of code needed to be modified, the Physical Communication and Writing Modes were analyzed.
 ###Physical Communication
@@ -105,8 +105,21 @@ Additionally, the table below summarizes the 9 bit packets (reduced to 8 bit by 
 As a demonstration of logical operators the chart below was made.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/andOrXor.JPG)
+
+##Code
+The code provided by Dr. Coulston created a line on the LCD screen 8 pixels vertical with a one pixel hole in the centre. This code could be easily modified to draw an 8x8 box given that a box is 8 of these lines stacked horizontally with the hole in the middle removed. The code below loops through the call to #writeNokiaByte 8 times in order to draw the 8 lines. Additionally, the value of 0xFF was set to regiser 13 so that the line was solid.
+
+```
+mov		#8, R7						; to draw a box 8x8 r7 counts number of iterations
+boxloop
+	mov		#NOKIA_DATA, R12			; loops through drawing an 8 pixel vertical line 8 times offset 1 bit horizontally
+	mov		#0xFF, R13					;
+	call	#writeNokiaByte
+	dec 	R7
+	jnz		boxloop
+```
 ####Documentation
-DOCUMENTATION: The following cadets worked together and discussed Lab 3 Mega Prelab on Sunday, 28 September 2014 starting at 1830 in the 321 classroom. 
+The following cadets worked together and discussed Lab 3 Mega Prelab on Sunday, 28 September 2014 starting at 1830 in the 321 classroom. 
 •	C2C Nathan Ruprecht
 
 •	C2C Erik Thompson
