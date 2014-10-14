@@ -118,6 +118,10 @@ boxloop
 	dec 	R7
 	jnz		boxloop
 ```
+##Debugging
+The code functioned the first time it was tested so there was no need to debug. A potential error that could have happend is the assingment of the wrong value to r13 should the programmer not realize that to draw a solid line the binary sent to the LCD must be all logical hight (pixel on) or 1111 1111 (0xFF).
+##Testing/Results
+To test the code the MSP430 was plugged into the Nokia LCD, and the code was run. While running, the user pressed the set input button and an 8x8 pixel box was drawn on the screen. In summary, the inputs to the LCD were 1111 1111 when the button was pressed (as determined by line 116 in the code above), and the output was an 8x8 pixel box on the screen. The size of the box was confirmed by counting the pixels of the output. Additionally, after each subsequent press a box was drawn below the first box one pixel to the right. Functionality of the Lab did not state anything about the location of the box so this code completly functional.
 ####Documentation
 The following cadets worked together and discussed Lab 3 Mega Prelab on Sunday, 28 September 2014 starting at 1830 in the 321 classroom. 
 •	C2C Nathan Ruprecht
