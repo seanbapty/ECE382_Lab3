@@ -101,10 +101,19 @@ The code provided in the lab called NokiaByte 4 times in order to sent packets o
 Additionally, the table below summarizes the 9 bit packets (reduced to 8 bit by seperating the MSB) analyzed by the logic analyzer. These packets are representative of the first line drawn on the LCD in the upper right corner.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/lab%20table%202.JPG)
+
 ###Writing Modes
 As a demonstration of logical operators the chart below was made.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/andOrXor.JPG)
+
+###Logic Analyzer
+Two simulations were run on the logic analyzer. The first simulation was run to measure the time gap between command/data bit and the data bits and measure the characteristics of the microcontroller during a draw line putton press. The specific value of the sources and the time gap is in the chart below.
+
+![alt tag](https://raw.githubusercontent.com/seanbapty/ECE382_Lab3/master/logic%20analyzer%20command.jpg)
+
+The second simulation was run to demonstrate the behavior during a reset button press. The specific value of the sources and the time gap is in the chart below.
+![alt tag](https://github.com/seanbapty/ECE382_Lab3/blob/master/logic%20analyzer%20reset.jpg)
 
 ##Code
 The code provided by Dr. Coulston created a line on the LCD screen 8 pixels vertical with a one pixel hole in the centre. This code could be easily modified to draw an 8x8 box given that a box is 8 of these lines stacked horizontally with the hole in the middle removed. The code below loops through the call to #writeNokiaByte 8 times in order to draw the 8 lines. Additionally, the value of 0xFF was set to regiser 13 so that the line was solid.
