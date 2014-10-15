@@ -1,8 +1,10 @@
 ;-------------------------------------------------------------------------------
-;	Chris Coulston
+;	Chris Coulston and Sean Bapty
 ;	Fall 2014
 ;	MSP430G2553
-;	Draw a new vertical bar on the Nokia 1202 display everytime that SW3
+;	--Draw a new vertical bar on the Nokia 1202 display everytime that SW3
+;	--is pressed and released.
+;	Edited to draw a 8x8 box on the Nokia 1202 display everytime that SW3
 ;	is pressed and released.
 ;-------------------------------------------------------------------------------
 	.cdecls C,LIST,"msp430.h"		; BOILERPLATE	Include device header file
@@ -64,10 +66,10 @@ while0:
 	mov		#8, R7						; to draw a box 8x8 r7 counts number of iterations
 boxloop
 	mov		#NOKIA_DATA, R12			; loops through drawing an 8 pixel vertical line 8 times offset 1 bit horizontally
-	mov		#0xFF, R13					;
+	mov		#0xFF, R13					;1111 1111 setting all 8 pixels in the line to on
 	call	#writeNokiaByte
-	dec 	R7
-	jnz		boxloop
+	dec 	R7							;loop count decrement
+	jnz		boxloop						;if 8 has not be reached, draw another line
 
 
 	inc		R10							; since rows are 8 times bigger than columns
